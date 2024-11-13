@@ -1,4 +1,4 @@
-# Task Management API
+# Task Management API - 2.0
 
 The Task Management API is a RESTful service built using Spring Boot that helps teams manage tasks, track their statuses, and handle team collaboration with email notifications. The application allows users to create tasks, assign them to specific users, track task completion, and manage dependencies between tasks.
 
