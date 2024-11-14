@@ -4,8 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import simpleenergy.task.TaskAPI.model.User; // Adjust based on your actual User model
-import simpleenergy.task.TaskAPI.service.UserService; // Your service to handle user logic
+import simpleenergy.task.TaskAPI.model.User;
+import simpleenergy.task.TaskAPI.service.UserService;
 import simpleenergy.task.TaskAPI.util.JwtUtil;
 
 import java.util.Optional;
@@ -39,7 +39,7 @@ public class AuthController {
             User savedUser  = userService.signUp(user);
             return ResponseEntity.status(HttpStatus.CREATED).body(savedUser );
         } catch (RuntimeException e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(null); // Username already taken
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
         }
     }
 }
